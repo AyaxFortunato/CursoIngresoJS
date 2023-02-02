@@ -9,7 +9,7 @@ function mostrarAumento()
 	let resultado;	
 	let porcentaje;
 	
-	porcentaje 10;
+	porcentaje = 10;
 	
 	importe = document.getElementById("txtIdSueldo").value;
 	resultado = document.getElementById("txtIdResultado").value;
