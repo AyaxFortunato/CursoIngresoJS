@@ -10,6 +10,8 @@ function Rectangulo ()
     let ancho;
     let perimetro;
     let alambre;
+    let mensaje;
+    let totalAlambre;
     largo = document.getElementById("txtIdLargo").value;
     ancho = document.getElementById("txtIdAncho").value;
 
@@ -17,7 +19,7 @@ function Rectangulo ()
     ancho = parseFloat(ancho);
 
     perimetro = largo * 2 + ancho * 2;
-    alambre = perimetro * 3;
+    totalAlambre = perimetro * 3;
 
     console.log 
 }
