@@ -1,3 +1,4 @@
+//Ayax Fortunato
 function mostrar()
 {
 	let nota;
@@ -10,7 +11,7 @@ function mostrar()
 			mensaje = nota + "Exelente";
 		}
 		else{
-			if(nota >=4)
+			if(nota >= 4)
 			{
 				mensaje = nota + "Aprobado";
 			}

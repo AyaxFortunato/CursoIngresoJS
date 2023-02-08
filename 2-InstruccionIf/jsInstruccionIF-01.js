@@ -12,9 +12,7 @@ function mostrar()
 		alert("Niña bonita");	
 	}else{
 		alert("No puso 15")
-	}
-
- 
+	} 
 	
 	//if(condicion)//verdadero o falso (0) true -> verdadero false -> falso
 	//{
