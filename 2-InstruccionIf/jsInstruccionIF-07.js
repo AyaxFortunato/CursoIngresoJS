@@ -15,8 +15,4 @@ function mostrar()
 		mensaje = "Es muy pequeño para no ser soltero"
 		alert(mensaje);
 	}
-
-	
-
-
 }//FIN DE LA FUNCIÓN
