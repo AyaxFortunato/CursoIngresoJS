@@ -9,6 +9,62 @@
 // ”Usted pago X de IIBB.”, siendo X el impuesto que se pagó. 
 function CalcularPrecio () 
 {
-    
+    let cantidadLamp;
+    let marca;
+    let porcentaje;
+    let aumentos;
+    let precioBase;
+    let precio;
+    let precioDes;
+    let precioFinal;
+    let precioImpuestos;
+    let impuesto
+    let mensaje;
+
+    aumentos = 10;
+    precioBase = 35;
+    porcentaje = 0;
+
+    marca = document.getElementById("Marca").value;
+    cantidadLamp = parseInt(document,getElementById("txtIdCantidad").value);
+
+    precio = cantidadLamp * precioBase
+
+    if (cantidadLamp > 5){
+        porcentaje = 50;
+    }else if(cantidadLamp == 5){
+        if(marca == "ArgentinaLuz"){
+            porcentaje = 40;
+        }else{
+            porcentaje = 30;
+        }
+    }else if (cantidadLamp == 4){
+        if (marca == "ArgentinaLuz"|| marca == "FelipeLamparas"){
+            porcentaje = 25;
+        }else{
+            porcentaje = 20;
+        }
+    }else if (cantidadLamp == 3){
+        if (marca == "ArgentinaLuz"){
+            porcentaje = 15;
+        }else if (marca == "FelipeLamparas"){
+            porcentaje = 10;
+        }else{
+            porcentaje = 5;
+        }
+    }else{
+        porcentaje = 0;
+    }
  	
+    precioDes = precio * porcentaje / 100;
+    precioFinal = precio - precioDes;
+
+    mensaje = "Precio final es " + precioFinal;
+
+    if(precioFinal >= 120){
+        impuesto = precioFinal * aumentos / 100;
+        precioImpuestos = precioFinal + aumentos;
+        alert ("Pago" + precioImpuestos + "IIBB Usted pago " + impuesto + "lo que se pago");
+    }
+    document.getElementById("txtIdprecioDescuento").value = mensaje;
 }
