@@ -1,8 +1,18 @@
 function mostrar()
 {
 	//tomo el mes
-	var mesDelAño =txtIdMes.value;
-	alert(mesDelAño);
+	let mesDelAño;
+	let mensaje;
+
+	mesDelAño = document.getElementById("").value;
+	switch(mesDelAño){
+		case "Febrero":
+			mensaje = "Si teiene 28 dias"
+			break:
+		case "Abril"
+		case "Mayo"
+		case ""
+	}
 	
 	
 

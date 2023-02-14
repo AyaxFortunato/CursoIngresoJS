@@ -1,3 +1,4 @@
+//Ayax Fortunato
 function mostrar()
 {
 	//tomo la hora
@@ -6,8 +7,7 @@ function mostrar()
 
 	hora = document.getElementById("txtIdHora").value;
 	if(hora >= 0 && hora <= 24){
-		switch(hora)
-		{
+		switch(hora){
 			case 7:
 			case 8:
 			case 9:
@@ -31,10 +31,6 @@ function mostrar()
 		}else{
 			mensaje = "La hora no existe";
 		}
-
-
-
-
-	}
-	console.log(mensaje);
-}//FIN DE LA FUNCIÓN
+	alert(mensaje);
+}
+//FIN DE LA FUNCIÓN

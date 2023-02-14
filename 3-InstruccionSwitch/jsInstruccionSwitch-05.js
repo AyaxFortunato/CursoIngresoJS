@@ -1,3 +1,4 @@
+//Ayax Fortunato
 function mostrar()
 {
 	//tomo la hora
@@ -5,21 +6,19 @@ function mostrar()
 	let mensaje;
 
 	hora = document.getElementById("txtIdHora").value;
+	hora = parseInt(hora);
 
-	switch(hora){
-		case (hora >= 7 && <= 11 )
+	switch(hora)
+	{
 		case 7:
 		case 8:
 		case 9:
 		case 10:
 		case 11:
-		break;
+			mensaje = "Es de mañana"
+			break;
 		default:
-		mensaje = "Es de mañana"
-	}
-	
+			mensaje = "No es de mañana"
+	}	
 	alert(mensaje)
-
-
-
 }//FIN DE LA FUNCIÓN
