@@ -1,3 +1,4 @@
+//Ayax Fortunato
 function mostrar()
 {
 	//tomo el mes
@@ -9,30 +10,30 @@ function mostrar()
 	switch(mesDelAnio)
 	{
 		case"Junio":
-		    "Julio":
-			"Agosto":
-			"Septiembre":
+		    "Julio";
+			"Agosto";
+			"Septiembre";
 			mensaje = "Invierno";
 			break;
 
 		case"Septiembre":
-			"Octubre":
-			"Noviembre":
-			"Diciembre":
+			"Octubre";
+			"Noviembre";
+			"Diciembre";
 			mensaje = "Primavera";
 			break;
 
 		case"Diciembre":
-			"Enero":
-			"Febrero":
-			"Marzo":
+			"Enero";
+			"Febrero";
+			"Marzo";
 			mensaje = "Verano";
 			break;
 
 		case"Marzo":
-			"Abril":
-			"Mayo":
-			"Junio":
+			"Abril";
+			"Mayo";
+			"Junio";
 			mensaje = "Otoño";
 			break;
 	}	//Termina Switch

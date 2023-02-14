@@ -1,3 +1,4 @@
+//Ayax Fortunato
 function mostrar()
 {
 	//tomo el mes
@@ -10,8 +11,8 @@ function mostrar()
 			mensaje = "Si teiene 28 dias"
 			break:
 		case "Abril"
-		case "Mayo"
-		case ""
+		case "Mayo";
+		case "Abril";
 	}
 	
 	

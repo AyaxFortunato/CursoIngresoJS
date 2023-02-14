@@ -7,9 +7,9 @@ function mostrar()
 	var contador;
 	var acumulador;
 	var respuesta;
-	contador=0;
-	acumulador=0;
-	respuesta='si';
+	contador = 0;
+	acumulador = 0;
+	respuesta = "si";
 
 
 	txtIdSuma.value=acumulador;
