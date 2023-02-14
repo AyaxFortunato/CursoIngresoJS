@@ -10,9 +10,19 @@ function mostrar()
 		case "Febrero":
 			mensaje = "Si teiene 28 dias"
 			break:
-		case "Abril"
-		case "Mayo";
-		case "Abril";
+			
+		case "Enero":	
+		case "Febrero":
+		case "Marzo":
+		case "Abril":
+		case "Mayo":
+		case "Junio":
+		case "Julio":
+		case "Agosto":
+		case "Septiembre":
+		case "Octubre":
+		case "Noviembre":
+		case "Diciembre":
 	}
 	
 	

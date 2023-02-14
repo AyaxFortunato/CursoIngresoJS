@@ -25,7 +25,7 @@ function mostrar()
 			case 19:
 				mensaje = "Es de tarde";
 				break;
-			default
+			default:
 				mensaje = "Es de noche";
 		}
 		}else{
