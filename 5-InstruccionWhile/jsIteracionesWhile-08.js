@@ -30,10 +30,7 @@ function mostrar()
 		{
 		sumaPositivos = sumaPositivos + numeroIngresado;	
 		}
-		else
-		{
 		multiplicacionNegativos = numeroIngresado * multiplicacionNegativos;
-		}
 		respuesta = prompt("Ingrese Si si quiere continuar");	
 	}
 	document.getElementById("txtIdSuma").value=sumaPositivos;
