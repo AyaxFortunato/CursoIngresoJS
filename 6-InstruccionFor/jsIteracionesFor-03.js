@@ -1,8 +1,10 @@
+//Ayax Fortunato
 function mostrar()
 {
+	let repetciones;
 
-	var repetciones = prompt("ingrese el número de repeticiones");
-	alert("ok");
+	repetciones = parseInt(prompt("ingrese el número de repeticiones"));
+	for(i = 1; i < repetciones + 1; i++)
 
-
+	document.write("Hola UTN FRA <br>");
 }//FIN DE LA FUNCIÓN
