@@ -19,7 +19,7 @@ d) Informar el tipo con mas cantidad de bolsas.
 bandera,if
 f) El tipo mas caro
 */
-function mostrar()
+/*function mostrar()
 {
     let cantidadBolsas;
     let acumuladorCal;
@@ -115,4 +115,93 @@ function mostrar()
     console.log(mensaje);
     console.log("el tipo con mas cantidad de bolsas es: " + mayorTipoDeBolsa);
     console.log("el tipo mas caro es: " + tipoMasCaro + "con $ " + precioBolsaMasCara);
+}
+
+
+/*Ayax Fortunato
+//Division B
+/* Inmoviliaria: Nos piden armar un programa para ingresar los siguientes datos de los inquilinos de los inmuebles: 
+nombre,
+lugar(CABA, Conurbano, Interior) 
+tipo( dpto, casa, quinta) en CABA solo se alquilan dptos y casas
+cantidad de habitantes (1-3 p/ dpto, 1-7 p/casa, 1-15 p/ quinta)
+alquiler
+INFORMAR: 
+// a) Cantidad de casa alquiladas en CABA
+// b) El inquilino con alquiler más caro //nombre de
+// c) Del interior del país, la quinta más cara */ // toFixed.2
+
+function mostrar() {
+    let nombreIngresado;
+    let lugarIngresado;
+    let tipoIngresado;
+    let cantidadIngresada;
+    let alquilerIngresado;
+    let quintaMasCaraInterior;
+    let alquilerMasCaro;
+    let nombreInquilinoConAlquilerMasCaro;
+
+    let respuesta = 'si';
+    let contadorCasasCABA = 0;
+    let banderaAlquilerMasCaro = true;
+    let banderaQuintaInterior = true;
+
+    while (respuesta == 'si') {
+        nombreIngresado = prompt('Ingresar nombre');
+        while (!isNaN(nombreIngresado)) {
+            nombreIngresado = prompt('Error. Ingresar nombre válido');
+        }
+
+        lugarIngresado = prompt('Ingresar zona en donde alquila ("CABA", "Conurbano" o "Interior")');
+        while (lugarIngresado != "CABA" && lugarIngresado != "Conurbano" && lugarIngresado != "Interior") {
+            lugarIngresado = prompt('Error. Ingresar una zona en donde alquila válida ("CABA", "Conurbano" o "Interior")');
+        }
+
+        tipoIngresado = prompt('Ingresar su tipo de alquiler  ("dpto", "casa" o "quinta")');
+        while (tipoIngresado != "dpto" && tipoIngresado != "casa" && tipoIngresado != "quinta") {
+            tipoIngresado = prompt('Error. Ingresar una tipo de alquiler válido ("dpto", "casa" o "quinta")');
+        }
+
+        cantidadIngresada = parseInt(prompt('Ingresar cantidad de habitantes (1-3 p/ dpto, 1-7 p/casa, 1-15 p/ quinta)'));
+        while (isNaN(cantidadIngresada) || cantidadIngresada < 1 || (tipoIngresado == "dpto" && cantidadIngresada > 3) || (tipoIngresado == "casa" && cantidadIngresada > 7) || (tipoIngresado == "quinta" && cantidadIngresada > 15)) {
+            cantidadIngresada = parseInt(prompt('Error. Ingrese una cantidad de habitantes válida(1-3 p/ dpto, 1-7 p/casa, 1-15 p/ quinta)'));
+        }
+
+        alquilerIngresado = parseFloat(prompt('Ingresar precio'));
+        while (isNaN(alquilerIngresado) || alquilerIngresado < 1 || alquilerIngresado > 1000000) {
+            alquilerIngresado = parseFloat(prompt('Ingrese una precio válido. Entre 1 y 1 millón'));
+        }
+        switch (lugarIngresado) {
+            case "CABA":
+                if (tipoIngresado == "casa") {
+                    contadorCasasCABA = contadorCasasCABA + 1;
+                }
+                break;
+            case "Interior":
+                if (tipoIngresado == "quinta" && (banderaQuintaInterior == true || quintaMasCaraInterior < alquilerIngresado)) {
+                    quintaMasCaraInterior = alquilerIngresado;
+                    banderaQuintaInterior = false;
+                }
+                break;
+        }
+        if (banderaAlquilerMasCaro == true || alquilerMasCaro < alquilerIngresado) {
+            nombreInquilinoConAlquilerMasCaro = nombreIngresado;
+            alquilerMasCaro = alquilerIngresado;
+            banderaAlquilerMasCaro = false;
+        }
+
+        respuesta = prompt('¿Desea seguir ingresando datos? si/no');
+    }
+    if (contadorCasasCABA != 0) {
+        console.log('La cantidad de casa alquiladas en CABA es ' + contadorCasasCABA);
+    } else {
+        console.log('No se ingresaron casas alquiladas en CABA');
+    }
+    console.log('El inquilino con alquiler más caro es ' + nombreInquilinoConAlquilerMasCaro);
+
+    if (banderaQuintaInterior == false) {
+        console.log('Del interior del país, la quinta más cara tiene un precio de $' + quintaMasCaraInterior + ' de alquiler');
+    } else {
+        console.log('No se ingresaron quintas alquiladas en el interior del país');
+    }
 }
