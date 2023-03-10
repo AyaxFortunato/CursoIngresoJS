@@ -131,7 +131,7 @@ INFORMAR:
 // b) El inquilino con alquiler más caro //nombre de
 // c) Del interior del país, la quinta más cara */ // toFixed.2
 
-function mostrar() {
+/*function mostrar() {
     let nombreIngresado;
     let lugarIngresado;
     let tipoIngresado;
@@ -204,4 +204,51 @@ function mostrar() {
     } else {
         console.log('No se ingresaron quintas alquiladas en el interior del país');
     }
+}*/
+
+function mostrar() {
+
+    let respuesta = "1"
+    let cantidadDeCasasAlquiladasCABA = 0;
+    let nombreInquilinoConAlquilerMasCaro = "";
+    let alquilerMasAlto = 0;
+    let laQuintaMasCaraDelInterior = 0;
+    let nombreDeLaQuintaMasCaraDelInterior = "";
+
+    while (respuesta == "1"){
+        let nombre = prompt("Flaco ingresa el nombre: ")
+
+        let lugar = prompt("Ingresar ciudad: ")
+        while (lugar != "CABA" && lugar !="Interior" && lugar != "Conurbano"){
+            lugar = prompt("Flaco ingresa bien el lugar: ")
+        }
+        let tipoDePropiedad = prompt("Ingresar tipo de propiedad: ")
+        while(lugar =="CABA" && tipoDePropiedad=="quinta"){
+            tipoDePropiedad = prompt("Tienes que elegir entre casa o depto: ")
+        }
+
+        
+        let cantidadDeHabitantes = prompt("Ingrear cantidad de habitantes: ")}
+        while(tipoDePropiedad == "depto" && (cantidadDeHabitantes < 1 || cantidadDeHabitantes > 3) ){
+            cantidadDeHabitantes = prompt("Error, ingrese correctamente la cantidad de habitantes: ")
+        }
+
+        let precioDelAlquiler = prompt("Ingresar valor del alquiler: ")
+        // 1)
+        if(tipoDePropiedad == "casa" && lugar == "CABA"){
+            cantidadDeCasasAlquiladasCABA = cantidadDeCasasAlquiladasCABA + 1;
+        }
+        //2)
+        if(alquilerMasAlto < precioDelAlquiler){
+            alquilerMasAlto = precioDelAlquiler;
+            nombreInquilinoConAlquilerMasCaro = nombre;
+        }
+
+        
+       
+
+    }
+
+
+
 }
